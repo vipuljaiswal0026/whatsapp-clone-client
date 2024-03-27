@@ -27,8 +27,6 @@ function HeaderMenu({ setOpenDrawer }) {
   };
 
   const signOut = () => {
-    console.log("log out");
-    console.log(account.sub);
     dispatch(logOut(account.sub));
   };
 
