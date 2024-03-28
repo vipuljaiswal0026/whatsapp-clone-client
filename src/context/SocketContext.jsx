@@ -13,7 +13,9 @@ export const SocketProvider = ({ children }) => {
 
   // Initialize the socket instance when the component mounts
   useEffect(() => {
-    const newSocket = io("http://localhost:8000"); // Your socket server URL
+    const url = import.meta.env.VITE_URL;
+
+    const newSocket = io(url); // Your socket server URL
     setSocket(newSocket);
 
     // Clean up function to close the socket connection when the component unmounts
